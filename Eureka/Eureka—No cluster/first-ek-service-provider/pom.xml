@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>first-ek-service-provider</groupId>
+  <artifactId>first-ek-service-provider</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>first-ek-service-provider Maven Webapp</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.7</maven.compiler.source>
+    <maven.compiler.target>1.7</maven.compiler.target>
+  </properties>
+  
+    <!-- <profiles>
+        服务器A
+        <profile>
+            <id>dev</id>
+            <properties>
+                <build.profile.id>A</build.profile.id>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+        </profile>
+        服务器B
+        <profile>
+            <id>test</id>
+            <properties>
+                <build.profile.id>B</build.profile.id>
+            </properties>
+        </profile>
+    </profiles> -->
+ 
+ 	<parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.2.RELEASE</version>
+   </parent>
+   
+   <dependencyManagement>
+        <dependencies>
+           <dependency>
+              <groupId>org.springframework.cloud</groupId>
+              <artifactId>spring-cloud-dependencies</artifactId>
+              <version>Dalston.SR1</version>
+              <type>pom</type>
+              <scope>import</scope>
+              </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-starter-eureka</artifactId>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-devtools</artifactId>
+	</dependency>
+  </dependencies>
+</project>
